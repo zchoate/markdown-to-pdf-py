@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  markdown-to-pdf:
+    build: .
+    volumes:
+      - ./example:/data
+    environment:
+      SOURCE_FILE: example.md
+      OUTPUT_HTML: output/example.html
+      OUTPUT_PDF: output/example.pdf
