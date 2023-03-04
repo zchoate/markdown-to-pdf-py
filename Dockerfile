@@ -6,6 +6,8 @@ WORKDIR /data
 
 COPY requirements.txt /app/
 
+RUN apt-get update && apt-get upgrade -yq
+
 RUN python -m pip install --upgrade pip && \
     pip install -r /app/requirements.txt
 
